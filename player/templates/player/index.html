@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+        <a class="btn-floating btn-large waves-effect waves-light red"
+            href="/save">
+            <i class="material-icons">add</i>
+        </a>
+        <table border="3">
+            <tr style="font-weight:bold">
+                <td>Distance</td>
+                <td>Time</td>
+                <td>Calories</td>
+            </tr>
+        {% for run in runs %}
+        <tr>
+            <td>{{ run.distance }}</td>
+            <td>{{ run.time }}</td>
+            <td>{{ run.calories|floatformat:2 }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>

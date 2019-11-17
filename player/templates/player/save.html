@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+        <a class="waves-effect waves-light btn" href="/">Cancel</a>
+        <hr/>
+        <div class="row">
+            <form class="col s12" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Enter the distance travelled in kilometers"
+                        name="distance" id="distance" type="number" class="validate"
+                        step="any">
+                        <label for="distance">Distance</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Enter the time taken in minutes" 
+                        name="time" id="time" type="number" class="validate"
+                        step="any">
+                        <label for="time">Time</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Enter you mass in KG" 
+                        name="mass" id="mass" type="number" class="validate"
+                        step="any">
+                        <label for="mass">Mass</label>
+                    </div>
+                </div>
+                
+                <button class="btn waves-effect waves-light" type="submit" name="action">Save
+                    <i class="material-icons right">send</i>
+                </button>
+                        
+            </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>
